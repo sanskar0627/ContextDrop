@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "ChatHop",
+  "version": "1.0.0",
+  "description": "Bookmark AI chats and hop between platforms with smart context transfer.",
+  "permissions": ["storage", "activeTab", "tabs", "scripting"],
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*",
+    "https://www.perplexity.ai/*",
+    "https://grok.x.ai/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*", "https://chatgpt.com/*"],
+      "js": ["content-scripts/common.js", "content-scripts/chatgpt.js"],
+      "css": ["styles/injected.css"]
+    },
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["content-scripts/common.js", "content-scripts/claude.js"],
+      "css": ["styles/injected.css"]
+    },
+    {
+      "matches": ["https://gemini.google.com/*"],
+      "js": ["content-scripts/common.js", "content-scripts/gemini.js"],
+      "css": ["styles/injected.css"]
+    },
+    {
+      "matches": ["https://www.perplexity.ai/*"],
+      "js": ["content-scripts/common.js", "content-scripts/perplexity.js"],
+      "css": ["styles/injected.css"]
+    },
+    {
+      "matches": ["https://grok.x.ai/*"],
+      "js": ["content-scripts/common.js", "content-scripts/grok.js"],
+      "css": ["styles/injected.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://app.chathop.com/*",
+      "http://localhost:3000/*"
+    ]
+  }
+}
