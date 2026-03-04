@@ -1,0 +1,183 @@
+#chathop-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2147483647;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.chathop-main-btn {
+  width: 52px;
+  height: 52px;
+  border: 0;
+  border-radius: 50%;
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
+}
+
+.chathop-menu {
+  position: absolute;
+  bottom: 62px;
+  right: 0;
+  width: 230px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: all 0.16s ease;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.14);
+}
+
+#chathop-fab.open .chathop-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.chathop-menu-item {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.chathop-menu-item:hover {
+  background: #f1f5f9;
+}
+
+.chathop-menu-item.strong {
+  font-weight: 700;
+}
+
+.chathop-toast {
+  position: fixed;
+  right: 24px;
+  bottom: 90px;
+  background: #0f172a;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  z-index: 2147483647;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.2s ease;
+}
+
+.chathop-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chathop-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2147483647;
+}
+
+.chathop-modal {
+  width: min(460px, 90vw);
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.35);
+}
+
+.chathop-modal-large {
+  width: min(720px, 95vw);
+}
+
+.chathop-meta {
+  margin: 6px 0 16px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.chathop-recommend {
+  margin: -8px 0 14px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: 1px solid #99f6e4;
+  background: #f0fdfa;
+  color: #115e59;
+  font-size: 12px;
+}
+
+.chathop-transfer-options {
+  display: grid;
+  gap: 8px;
+}
+
+.chathop-option {
+  text-align: left;
+  border: 1px solid #dbe4ee;
+  background: #fff;
+  color: #0f172a;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chathop-option:hover {
+  border-color: #0f172a;
+}
+
+.chathop-option.recommended {
+  border-color: #0f172a;
+  background: #f8fafc;
+}
+
+.chathop-cancel,
+.chathop-send {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chathop-cancel {
+  background: #e2e8f0;
+  color: #0f172a;
+  margin-top: 10px;
+}
+
+.chathop-send {
+  background: #0f172a;
+  color: #fff;
+}
+
+.chathop-editor {
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 10px;
+  resize: vertical;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.chathop-editor-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
