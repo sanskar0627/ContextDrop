@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatHop Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <h1>ChatHop</h1>
+          <p>AI command center</p>
+        </div>
+        <nav>
+          <button data-view="all" class="nav-item active">All Bookmarks</button>
+          <button data-view="search" class="nav-item">Search</button>
+          <button data-view="settings" class="nav-item">Settings</button>
+        </nav>
+        <section class="platforms">
+          <h2>Platforms</h2>
+          <div class="platform-list" id="platform-filters"></div>
+        </section>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <input id="search-input" type="search" placeholder="Search titles, messages, tags" />
+          <select id="sort-select">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="platform">Platform</option>
+            <option value="messages">Most messages</option>
+          </select>
+        </header>
+
+        <section id="cards" class="cards"></section>
+      </main>
+    </div>
+
+    <dialog id="reader-dialog" class="reader-dialog">
+      <article class="reader-sheet">
+        <header>
+          <h3 id="reader-title">Conversation</h3>
+          <div class="reader-actions">
+            <button id="reader-hop">Hop</button>
+            <button id="reader-close">Close</button>
+          </div>
+        </header>
+        <section id="reader-content"></section>
+      </article>
+    </dialog>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
