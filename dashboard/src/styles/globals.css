@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f7f6f2;
+  --ink: #1f1e1b;
+  --panel: #fffdfa;
+  --line: #e0d9d2;
+  --brand: #d26f4b;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(210, 111, 75, 0.15), transparent 35%),
+    radial-gradient(circle at 85% 8%, rgba(10, 147, 150, 0.18), transparent 42%),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Avenir Next", "Nunito Sans", "Segoe UI", sans-serif;
+}
