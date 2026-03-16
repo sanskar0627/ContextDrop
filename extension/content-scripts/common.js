@@ -76,7 +76,7 @@ async function onBookmarkClick() {
     const result = await sendToBackground("SAVE_BOOKMARK", conversation);
 
     if (result?.success) {
-      showToast("Saved to ChatHop");
+      showToast("Saved to ContextDrop");
     } else {
       showToast(result?.error || "Could not save bookmark");
     }

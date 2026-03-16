@@ -47,5 +47,5 @@ function formatInjectionText(contextText, fromPlatform, mode) {
     return contextText;
   }
 
-  return `[Context transferred from ${capitalize(fromPlatform)} via ChatHop]\n\n${contextText}`;
+  return `[Context transferred from ${capitalize(fromPlatform)} via ContextDrop]\n\n${contextText}`;
 }

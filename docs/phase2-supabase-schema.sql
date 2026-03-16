@@ -1,4 +1,4 @@
--- ChatHop Phase 2 schema (Supabase/Postgres)
+-- ContextDrop Phase 2 schema (Supabase/Postgres)
 
 create table if not exists profiles (
   id uuid references auth.users primary key,

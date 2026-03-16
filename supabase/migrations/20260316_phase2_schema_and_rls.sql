@@ -1,4 +1,4 @@
--- ChatHop Phase 2 schema + RLS
+-- ContextDrop Phase 2 schema + RLS
 -- Apply in Supabase SQL editor or via Supabase CLI migrations.
 
 create extension if not exists pgcrypto;

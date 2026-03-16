@@ -7,7 +7,7 @@ async function compressConversation(conversation) {
   const apiKey = storageResult.chathop_settings?.apiKey;
 
   if (!apiKey) {
-    throw new Error("Missing Anthropic API key. Add it in ChatHop settings.");
+    throw new Error("Missing Anthropic API key. Add it in ContextDrop settings.");
   }
 
   const response = await fetch(ANTHROPIC_API_URL, {

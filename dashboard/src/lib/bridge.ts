@@ -5,7 +5,9 @@ export async function getBookmarks(): Promise<Bookmark[]> {
     return [];
   }
 
-  const response = await window.chrome.runtime.sendMessage({ action: "GET_BOOKMARKS" });
+  const response = (await window.chrome.runtime.sendMessage({ action: "GET_BOOKMARKS" })) as
+    | { bookmarks?: Bookmark[] }
+    | undefined;
   return response?.bookmarks || [];
 }
 
@@ -14,10 +16,12 @@ export async function searchBookmarks(query: string): Promise<Bookmark[]> {
     return [];
   }
 
-  const response = await window.chrome.runtime.sendMessage({
+  const response = (await window.chrome.runtime.sendMessage({
     action: "SEARCH_BOOKMARKS",
     data: { query }
-  });
+  })) as
+    | { results?: Bookmark[] }
+    | undefined;
 
   return response?.results || [];
 }
@@ -34,7 +38,9 @@ export async function getHopHistory(): Promise<HopEvent[]> {
     return [];
   }
 
-  const response = await window.chrome.runtime.sendMessage({ action: "GET_HOP_HISTORY" });
+  const response = (await window.chrome.runtime.sendMessage({ action: "GET_HOP_HISTORY" })) as
+    | { history?: HopEvent[] }
+    | undefined;
   return response?.history || [];
 }
 
@@ -55,7 +61,9 @@ export async function getCompareSessions(): Promise<CompareSession[]> {
     return [];
   }
 
-  const response = await window.chrome.runtime.sendMessage({ action: "GET_COMPARE_SESSIONS" });
+  const response = (await window.chrome.runtime.sendMessage({ action: "GET_COMPARE_SESSIONS" })) as
+    | { sessions?: CompareSession[] }
+    | undefined;
   return response?.sessions || [];
 }
 
@@ -64,10 +72,12 @@ export async function recordCompareResult(sessionId: string, winnerPlatform: str
     return false;
   }
 
-  const response = await window.chrome.runtime.sendMessage({
+  const response = (await window.chrome.runtime.sendMessage({
     action: "RECORD_COMPARE_RESULT",
     data: { sessionId, winnerPlatform }
-  });
+  })) as
+    | { success?: boolean }
+    | undefined;
 
   return Boolean(response?.success);
 }

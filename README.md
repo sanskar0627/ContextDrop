@@ -1,6 +1,6 @@
-# ChatHop
+# ContextDrop
 
-ChatHop is a Chrome Extension + Dashboard that lets you bookmark AI conversations and hop context across platforms.
+ContextDrop is a Chrome Extension + Dashboard that lets you bookmark AI conversations and hop context across platforms.
 
 ## Workspace
 

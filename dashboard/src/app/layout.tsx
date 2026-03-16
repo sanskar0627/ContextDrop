@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "ChatHop Dashboard",
+  title: "ContextDrop Dashboard",
   description: "Manage AI chat bookmarks and hop context across platforms."
 };
 

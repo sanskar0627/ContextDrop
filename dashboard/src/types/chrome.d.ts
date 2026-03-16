@@ -4,7 +4,7 @@ declare global {
   interface Window {
     chrome?: {
       runtime?: {
-        sendMessage: (message: unknown) => Promise<any>;
+        sendMessage: (message: unknown) => Promise<unknown>;
       };
       storage?: {
         local?: {

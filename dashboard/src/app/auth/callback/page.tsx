@@ -45,7 +45,7 @@ export default function AuthCallbackPage() {
   return (
     <main className="min-h-screen flex items-center justify-center p-6">
       <section className="rounded-2xl border border-[var(--line)] bg-[var(--panel)] p-6">
-        <h1 className="text-xl font-bold">ChatHop Auth</h1>
+        <h1 className="text-xl font-bold">ContextDrop Auth</h1>
         <p className="text-sm text-zinc-500 mt-2">{message}</p>
       </section>
     </main>

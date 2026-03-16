@@ -65,7 +65,7 @@ export default function CompareResultsPage() {
           <p className="text-zinc-500 mt-1">Review side-by-side AI compare sessions and record winners.</p>
         </div>
         <button
-          onClick={() => toJsonDownload(filtered, `chathop-compare-${Date.now()}.json`)}
+          onClick={() => toJsonDownload(filtered, `contextdrop-compare-${Date.now()}.json`)}
           className="rounded-xl border border-[var(--line)] bg-white px-3 py-2 text-xs font-semibold"
         >
           Export JSON
